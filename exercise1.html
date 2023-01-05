@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Me</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+
+    <style>
+        .head {
+            color: rgb(198, 148, 22);
+            font-size: 5vw;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+
+        /* Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+        .image {
+            margin-left: 200px;
+            margin-top: 70px;
+        }
+
+        .details {
+
+            color: rgb(0, 0, 0);
+            margin-top: 0px;
+            font-size: 2vw;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+
+        .age {
+
+            font-size: 2vw;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="head">About Me.</div>
+  
+    <div class="image">
+        <img src="pexels-musalim-ridho-14131306.jpg" alt="" height="500px" width="">
+    </div>
+
+      <div class="container-fluid">
+
+        <div class="details"><b>Name:</b> <br>Rachel Kerisnan</div><br>
+        <div class="details"><b>Job Title:</b> <br>UI/UX Designer</div><br>
+        <div class="details"><b>Age:</b>  <div class="age"></div>  </div><br>
+        <div class="details"><b>Description:</b><br> I am studying in Republic Polytechnic. <br>I am in DDDD and I love doing
+            digital art. </div><br>
+        <div class="details"><b>Email:</b> <br>21013643@myrp.edu.sg</div><br>
+
+      </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <script>
+        anime({
+            targets: '.details',
+            translateY: -490,
+
+            delay: anime.stagger(300, { start: 1000 }),
+
+            translateX: 570,
+            easing: 'easeInOutExpo'
+        });
+
+        anime({
+            targets: '.age',
+            innerHTML: [0, 19], //start and end values
+            easing: 'linear',
+            round: 1, //rounds off to zero decimal places 
+            duration: 4500,
+            delay: 1200
+        });
+
+        anime({
+            targets: '.head',
+            translateX: 0,
+            translateY:45,
+            duration: 3000
+        });
+    </script>
+
+</body>
+
+</html>
